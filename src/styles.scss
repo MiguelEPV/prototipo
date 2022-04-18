@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {height: 100%;}
+body {overflow:hidden; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-dialog-container {
+    background-color: lightgreen !important;
+ }
+#header{
+    background-color: lightblue;
+    height: 80px;
+}
+
+.calendar-card {
+    width: 300px;
+}
+
+.cdk-overlay-pane{
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    max-height: 87%;
+    overflow-y: scroll;
+}
+
+
+

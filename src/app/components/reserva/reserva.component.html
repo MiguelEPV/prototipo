@@ -1,0 +1,47 @@
+<!-- <div mat-dialog-content>{{message}}</div> -->
+<button mat-button (click) = "onClickClose()">&times;</button>
+<h1>Reserva en {{message.nombre}}</h1>
+<p>Aforo actual: {{message.afluencia}}</p>
+<form>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput type="text">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Teléfono</mat-label>
+        <input matInput type="tel">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email">
+    </mat-form-field>
+    <mat-label>Fecha</mat-label>
+    <mat-card class="calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+    </mat-card>
+    <mat-form-field appearance="fill">
+        <mat-label>Hora</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let hour of hours" value="hour">
+            {{hour}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-label>Plano de mesas</mat-label>
+    <img src="../assets/images/plano_rest.png">
+    <mat-form-field appearance="fill">
+        <mat-label>Mesa</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let table of tables" value="table">
+            {{table}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>
+<div mat-dialog-actions> 
+    <button mat-button [mat-dialog-close] = "true">Reservar</button>
+</div>
