@@ -26,8 +26,8 @@
     <mat-form-field appearance="fill">
         <mat-label>Hora</mat-label>
         <mat-select>
-          <mat-option *ngFor="let hour of hours" value="hour">
-            {{hour}}
+          <mat-option *ngFor= "let hora of message.horas" value="hora">
+            {{hora}}
           </mat-option>
         </mat-select>
     </mat-form-field>
@@ -36,7 +36,7 @@
     <mat-form-field appearance="fill">
         <mat-label>Mesa</mat-label>
         <mat-select>
-          <mat-option *ngFor="let table of tables" value="table">
+          <mat-option *ngFor="let table of message.mesas" value="table">
             {{table}}
           </mat-option>
         </mat-select>

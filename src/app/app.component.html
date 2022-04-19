@@ -1,3 +1,4 @@
+<body>
 <mat-card id = "header">Header
   <input type="text" class="form-control" name= "filterRest" placeholder = "¿Dónde te apetece comer?" [(ngModel)] = "filterRest">
 </mat-card>
@@ -8,6 +9,8 @@
       <h2>{{rest.nombre}}</h2>
       <p>{{rest.comida}}</p>
       <p>Aflluencia: {{rest.afluencia}}</p>
+      <p>{{rest.puntuacion}}</p>
+      <p>{{rest.precio}}</p>
     </div>
   </div>
   <div [hidden] = "!displayRests" class="rest_info">
@@ -25,15 +28,13 @@
     </button>
   </div>
   <div class="mapa">
-    <img src="./assets/images/mapa.png" alt="error :(" usemap="#image-map">
+    <img src="./assets/images/mapa.png" alt="error :(" usemap="#image-map" >
     <map name= "image-map">
-      <area target="" alt="Pizza Hot" title="Pizza Hot" href="" coords="" shape="poly" (click) = clickRest(1)>
-      <area target="" alt="Teriyaki Alley" title="Teriyaki Alley" href="" coords="" shape="poly" (click) = clickRest(2)>
-      <area target = "" alt="Casa Pepe" title="Casa Pepe" coords="" shape="circle" (click) = clickRest(0)>
+      <area target="" alt="Pizza Hot" title="Pizza Hot" href="#" coords="272,115,40" shape="circle" (click) = "clickRest(1)">
+      <area target="" alt="Teriyaki Alley" title="Teriyaki Alley" href="#" coords="692,182,40" shape="circle" (click) = "clickRest(2)">
+      <area target="" alt="Casa Pepe" title="Casa Pepe" href="#" coords="468,452,40" shape="circle" (click) = "clickRest(0)">
   </map>
   </div>
 </div>
-
-
-
+</body>
 
