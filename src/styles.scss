@@ -10,6 +10,7 @@ mat-dialog-container {
     background-color: lightblue;
     height: 80px;
     display:flex;
+    align-items: center;
     
     p{
         transition: all .2s ease-in-out;
@@ -19,10 +20,24 @@ mat-dialog-container {
         transform: scale(1.1);
 
     }
+
+    div{
+        align-items: center;
+        p,h2{
+            margin-bottom: 0px;
+        }
+    }
 }
 
 .head1{
     display: flex;
+    justify-content: space-around;
+    width:40%;
+
+    input{
+        border-radius: 8px;
+        width:80%;
+    }
     
 
 }
@@ -30,6 +45,9 @@ mat-dialog-container {
 .head2{
     display:flex;
     margin-left: auto;
+    justify-content: space-around;
+    width:20%;
+    
     
 }
 
