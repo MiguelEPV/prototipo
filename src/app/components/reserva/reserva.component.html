@@ -1,47 +1,67 @@
 <!-- <div mat-dialog-content>{{message}}</div> -->
-<button mat-button (click) = "onClickClose()">&times;</button>
-<h1>Reserva en {{message.nombre}}</h1>
-<p>Aforo actual: {{message.afluencia}}</p>
-<form>
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Nombre</mat-label>
-        <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Apellido</mat-label>
-        <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Teléfono</mat-label>
-        <input matInput type="tel">
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput type="email">
-    </mat-form-field>
-    <mat-label>Fecha</mat-label>
-    <mat-card class="calendar-card">
-        <mat-calendar [(selected)]="selected"></mat-calendar>
-    </mat-card>
-    <mat-form-field appearance="fill">
-        <mat-label>Hora</mat-label>
-        <mat-select>
-          <mat-option *ngFor= "let hora of message.horas" value="hora">
-            {{hora}}
-          </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <mat-label>Plano de mesas</mat-label>
-    <img src="../assets/images/plano_rest.png">
-    <mat-form-field appearance="fill">
-        <mat-label>Mesa</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let table of message.mesas" value="table">
-            {{table}}
-          </mat-option>
-        </mat-select>
-    </mat-form-field>
-</form>
-<div mat-dialog-actions> 
-    <button mat-button [mat-dialog-close] = "true">Reservar</button>
+<div id="top_bar">
+    <button mat-button (click) = "onClickClose()">&times;</button>
+    <p>Aforo actual: {{message.afluencia}}</p>
 </div>
+<div id="title">
+    <h1>Reserva en {{message.nombre}}</h1>
+</div>
+
+<form>
+    <div id = "inputs_div">
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" required="True">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Apellido</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </div>
+
+        <div>  
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Teléfono</mat-label>
+                <input matInput type="tel">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" required="True">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div id="selections_div">
+        <div>
+            <mat-label class="label">Fecha</mat-label>
+            <mat-card class="calendar-card">
+                <mat-calendar [(selected)]="selected"></mat-calendar>
+            </mat-card>
+            <mat-form-field appearance="fill">
+                <mat-label>Hora</mat-label>
+                <mat-select>
+                <mat-option *ngFor= "let hora of message.horas" value="hora">
+                    {{hora}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-label class="label">Plano de mesas</mat-label>
+            <img id="table_map" src="../assets/images/plano_rest.png">
+            <mat-form-field appearance="fill">
+                <mat-label>Mesa</mat-label>
+                <mat-select>
+                <mat-option *ngFor="let table of message.mesas" value="table">
+                    {{table}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div id="button_div">
+        <button mat-button type="submit" [mat-dialog-close] = "true" >Reservar</button>
+    </div>
+</form>

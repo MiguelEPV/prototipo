@@ -9,10 +9,33 @@ mat-dialog-container {
 #header{
     background-color: lightblue;
     height: 80px;
+    display:flex;
+    
+    p{
+        transition: all .2s ease-in-out;
+    }
+    p:hover{
+        font-weight: bold;
+        transform: scale(1.1);
+
+    }
+}
+
+.head1{
+    display: flex;
+    
+
+}
+
+.head2{
+    display:flex;
+    margin-left: auto;
+    
 }
 
 .calendar-card {
-    width: 300px;
+    width: 70%;
+    
 }
 
 .cdk-overlay-pane{

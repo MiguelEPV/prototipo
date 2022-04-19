@@ -1,0 +1,52 @@
+h1{
+    margin-left: 8%;
+}
+#top_bar{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+    p{
+        color: red;
+    }
+}
+#inputs_div{
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    div{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3%;
+    }
+}
+#selections_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    div{
+        width: 50%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .label{
+            font-size: larger;
+            margin-bottom: 2%;
+        }
+        mat-form-field{
+            width: 35%;
+            margin-top: 2%;
+        }
+    }
+}
+#button_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#table_map{
+    width: 100%;
+}

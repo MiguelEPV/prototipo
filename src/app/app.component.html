@@ -1,6 +1,15 @@
 <body>
-<mat-card id = "header">Header
+  
+<mat-card id = "header">
+  <div class="head1">
+    <h2>&#128507;</h2>
   <input type="text" class="form-control" name= "filterRest" placeholder = "¿Dónde te apetece comer?" [(ngModel)] = "filterRest">
+  </div>
+  <div class="head2">
+    <i class="fa-solid fa-user"></i>
+  <p>Login</p>
+  <p>Sign Up</p>
+  </div>
 </mat-card>
 <div class="main_container">
   <div [hidden] = "displayRests"  class = "rest_container">
