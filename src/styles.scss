@@ -7,10 +7,11 @@ mat-dialog-container {
     background-color: lightgreen !important;
  }
 #header{
-    background-color: lightblue;
+    background-color: #c0f1edff;
     height: 80px;
     display:flex;
     align-items: center;
+    width: 100%;
     
     p{
         transition: all .2s ease-in-out;
@@ -32,22 +33,42 @@ mat-dialog-container {
 .head1{
     display: flex;
     justify-content: space-around;
-    width:40%;
-
+    width: 45%;
+    height: 100%;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    p{
+        margin-right: 10%;
+        font-family: Impact;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
     input{
         border-radius: 8px;
-        width:80%;
+        width: 275px;
+        border: 1px solid black;
+        height: 30%;
+        font-size: larger;
+        padding-left: 3%;
     }
-    
-
 }
 
 .head2{
     display:flex;
     margin-left: auto;
     justify-content: space-around;
-    width:20%;
-    
+    width:30%;
+    height: 100%;
+    margin-right: 0;
+    img{
+        max-width: 65%;
+        max-height: 65%;
+    }
+    p{
+        font-size: 17px;
+    }
     
 }
 

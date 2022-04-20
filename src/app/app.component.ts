@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ReservaComponent } from './components/reserva/reserva.component';
 
-declare function imageMapResize(): void;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,7 +19,8 @@ export class AppComponent implements OnInit {
   "afluencia": "",
   "puntuacion": "",
   "horas": [""],
-  "mesas": [0]
+  "mesas": [0],
+  "imagen": ""
   };
 
   public displayRests: boolean = false;
@@ -48,8 +48,8 @@ export class AppComponent implements OnInit {
   restaurantes = [
     {"id": 0,
     "nombre": "Casa Pepe",
-    "comida": "casera",
-    "precio": "€€€",
+    "comida": "Comida casera tradicional",
+    "precio": "€€",
     "direccion": "Calle del Señor, 1",
     "reserva": "obligatoria",
     "terraza": "si",
@@ -57,11 +57,12 @@ export class AppComponent implements OnInit {
     "afluencia": "70%",
     "puntuacion": "★★★★★",
     "horas": ["14:30", "15:00", "20:00", "22:30"],
-    "mesas": [1,3,7]},
+    "mesas": [1,3,7],
+    "imagen": "./assets/images/casa-pepe.jpg"},
 
     {"id": 1,
     "nombre": "Pizza Hot",
-    "comida": "pizza",
+    "comida": "Pizza y pasta",
     "precio": "€",
     "direccion": "Calle Hamood, 25",
     "reserva": "no-obligatoria",
@@ -70,12 +71,13 @@ export class AppComponent implements OnInit {
     "afluencia": "10%",
     "puntuacion": "★★★★",
     "horas": ["14:00", "15:30", "21:00", "22:00"],
-    "mesas": [1,3,4,5]},
+    "mesas": [1,3,4,5],
+    "imagen": "./assets/images/pizza-hot.jpeg"},
   
     {"id": 2,
     "nombre": "Teriyaki Alley",
-    "comida": "asiática",
-    "precio": "€€",
+    "comida": "Alta cocina asiática",
+    "precio": "€€€",
     "direccion": "Calle del Zander, 97",
     "reserva": "se aconseja",
     "terraza": "si",
@@ -83,12 +85,10 @@ export class AppComponent implements OnInit {
     "afluencia": "90%",
     "puntuacion": "★★★",
     "horas": ["13:30", "15:00", "22:00"],
-    "mesas": [2,3]}
+    "mesas": [2,3],
+    "imagen": "./assets/images/teriyaki-alley.jpeg"}
     ];
-    
-  imageResized() {
-    imageMapResize(); // Javascript function in imageMapResizer.min.js 
-  }
+  
   ngOnInit(){
   
   }

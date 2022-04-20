@@ -2,25 +2,35 @@
   
 <mat-card id = "header">
   <div class="head1">
-    <h2>&#128507;</h2>
-  <input type="text" class="form-control" name= "filterRest" placeholder = "¿Dónde te apetece comer?" [(ngModel)] = "filterRest">
-  </div>
+    <img src="./assets/images/logo.png">
+    <p>DiversiFood</p>
+    <input type="text" class="form-control" name= "filterRest" placeholder = "¿Dónde te gustaría ir a comer?" [(ngModel)] = "filterRest">
+  </div>  
   <div class="head2">
-    <i class="fa-solid fa-user"></i>
-  <p>Login</p>
-  <p>Sign Up</p>
-  <span class='bi bi-three-dots-vertical'>OPT</span>
+    <img src="./assets/images/icon-user-default.png">
+    <p>Login</p>
+    <p>Sign Up</p>
+    <img src="./assets/images/options.png">
   </div>
 </mat-card>
 <div class="main_container">
   <div [hidden] = "displayRests"  class = "rest_container">
     <h1>Restaurantes</h1>
     <div class = "rests" *ngFor = "let rest of restaurantes | filtrar:filterRest" (click) = clickRest(rest.id)>
-      <h2>{{rest.nombre}}</h2>
-      <p>{{rest.comida}}</p>
-      <p>Aflluencia: {{rest.afluencia}}</p>
-      <p>{{rest.puntuacion}}</p>
-      <p>{{rest.precio}}</p>
+      <div class="img_div">
+        <img src={{rest.imagen}}>
+      </div>
+      <div class = "info_div">
+        <h2>{{rest.nombre}}</h2>
+        <p>{{rest.comida}}</p>
+        <p>{{rest.precio}}</p>
+        <p>{{rest.puntuacion}}</p>
+        <p><b>Abierto</b> ahora</p>
+      </div>
+      <div class = "aforo_div">
+        <img src="./assets/images/grupo.png">
+        <p>{{rest.afluencia}}</p>
+      </div>
     </div>
   </div>
   <div [hidden] = "!displayRests" class="rest_info">
@@ -38,6 +48,7 @@
     </button>
   </div>
   <div class="mapa">
+    <h2>Seleccione un restaurante en el mapa</h2>
     <img src="./assets/images/mapa.png" alt="error :(" usemap="#image-map" >
     <map name= "image-map">
       <area target="" alt="Pizza Hot" title="Pizza Hot" href="#" coords="272,115,40" shape="circle" (click) = "clickRest(1)">
