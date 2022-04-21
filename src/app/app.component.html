@@ -33,9 +33,11 @@
       </div>
     </div>
   </div>
-  <div [hidden] = "!displayRests" class="rest_info">
-    <h2><span (click) = "displayRests = false">&#8249;</span>{{selectedRest.nombre}}</h2>
-    <img src="" alt="Imagen de Restaurante">
+  <div [hidden] = "!displayRests" class="rest_info" >
+    <div class="nom_rest"><span (click) = "displayRests = false">&#8249;</span>{{selectedRest.nombre}}</div>
+    <div class="img_gallery">
+      <img src={{selectedRest.imagen}}>
+    </div>
     <p>Comida: {{selectedRest.comida}}</p>
     <p>€€</p>
     <p>Dirección: {{selectedRest.direccion}}</p>

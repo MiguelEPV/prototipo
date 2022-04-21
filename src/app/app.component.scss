@@ -62,12 +62,25 @@ h1{
     border-right-style:solid;
     span{
         transition: transform .2s;
+        margin-right: 2%;
+        margin-left: 2%;
+        font-size: larger;
     }
     span:hover{
         transition: scale(1.5);
+        font-weight:larger;
     }
-}
+    p{
+        font-size:larger;
+    }
 
+}
+.img_gallery{
+    display: flex;
+    width: 96%;
+    margin-left: 2%;
+    height: 25%;
+}
 .mapa{
     width: 60%;
     height: 80%;
@@ -84,6 +97,11 @@ h1{
         border-radius: 5%;
         object-fit: cover;
     }
-    
-    
+}
+
+.nom_rest{
+    display:flex;
+    font-size: 30px;
+    height: 8%;
+    align-items: center;
 }
