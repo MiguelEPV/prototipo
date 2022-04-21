@@ -20,7 +20,8 @@ export class AppComponent implements OnInit {
   "puntuacion": "",
   "horas": [""],
   "mesas": [0],
-  "imagen": ""
+  "imagen": "",
+  "fotos": [""]
   };
 
   public displayRests: boolean = false;
@@ -58,7 +59,8 @@ export class AppComponent implements OnInit {
     "puntuacion": "★★★★★",
     "horas": ["14:30", "15:00", "20:00", "22:30"],
     "mesas": [1,3,7],
-    "imagen": "./assets/images/casa-pepe.jpg"},
+    "imagen": "./assets/images/casa-pepe.jpg",
+    "fotos":["./assets/images/casa-pepe1.jpeg", "./assets/images/casa-pepe2.jpeg", "./assets/images/casa-pepe3.jpeg"]},
 
     {"id": 1,
     "nombre": "Pizza Hot",
@@ -72,7 +74,9 @@ export class AppComponent implements OnInit {
     "puntuacion": "★★★★",
     "horas": ["14:00", "15:30", "21:00", "22:00"],
     "mesas": [1,3,4,5],
-    "imagen": "./assets/images/pizza-hot.jpeg"},
+    "imagen": "./assets/images/pizza-hot.jpeg",
+    "fotos":["./assets/images/pizza-hot1.jpeg", "./assets/images/pizza-hot2.jpeg", "./assets/images/pizza-hot3.jpeg"]},
+    
   
     {"id": 2,
     "nombre": "Teriyaki Alley",
@@ -86,8 +90,9 @@ export class AppComponent implements OnInit {
     "puntuacion": "★★★",
     "horas": ["13:30", "15:00", "22:00"],
     "mesas": [2,3],
-    "imagen": "./assets/images/teriyaki-alley.jpeg"}
-    ];
+    "imagen": "./assets/images/teriyaki-alley.jpeg",
+    "fotos":["./assets/images/teriyaki-alley1.jpeg", "./assets/images/teriyaki-alley2.jpeg", "./assets/images/teriyaki-alley3.jpeg"]}
+  ];
   
   ngOnInit(){
   

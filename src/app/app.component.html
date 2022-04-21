@@ -25,7 +25,7 @@
         <p>{{rest.comida}}</p>
         <p>{{rest.precio}}</p>
         <p>{{rest.puntuacion}}</p>
-        <p><b>Abierto</b> ahora</p>
+        <p><b>Abierto</b></p>
       </div>
       <div class = "aforo_div">
         <img src="./assets/images/grupo.png">
@@ -33,21 +33,37 @@
       </div>
     </div>
   </div>
-  <div [hidden] = "!displayRests" class="rest_info" >
+  <div [hidden] = "!displayRests" class="rest_info" [ngStyle] = "{'display': displayRests == true ? 'flex': 'none'}">
     <div class="nom_rest"><span (click) = "displayRests = false">&#8249;</span>{{selectedRest.nombre}}</div>
     <div class="img_gallery">
-      <img src={{selectedRest.imagen}}>
+      <div class="column" *ngFor = "let foto of selectedRest.fotos" >
+        <img src={{foto}}>
+      </div>
     </div>
-    <p>Comida: {{selectedRest.comida}}</p>
-    <p>€€</p>
-    <p>Dirección: {{selectedRest.direccion}}</p>
-    <p>Reserva: {{selectedRest.reserva}}</p>
-    <p>Terraza: {{selectedRest.terraza}}</p>
-    <p>Teléfono: {{selectedRest.tel}}</p>
-    <p>Aflluencia: {{selectedRest.afluencia}}</p>
-    <button mat-button (click) = "openDialog()">
-      Reservar
-    </button>
+    <div class="general_data">
+      <div class = "data_div">
+        <p><b>Comida:</b> {{selectedRest.comida}}</p>
+        <p>€€</p>
+        <p><b>Dirección:</b> {{selectedRest.direccion}}</p>
+        <p><b>Reserva:</b> {{selectedRest.reserva}}</p>
+        <p><b>Terraza:</b> {{selectedRest.terraza}}</p>
+        <p><b>Teléfono:</b> {{selectedRest.tel}}</p>
+        <p><b>Aflluencia:</b> {{selectedRest.afluencia}}</p>
+      </div>
+      <div class="other_data_div">
+        <div class="menu_div">
+          <p style = "text-decoration: underline;">Menú</p>
+          <img src="./assets/images/menu.png" alt="menu">
+        </div>
+        <div class="acc_div">
+          <p style = "text-decoration: underline;">Accesibilidad</p>
+          <img src="./assets/images/disabled.png" alt="handicap">
+          <img src="./assets/images/gluten_free.png" style="width:25%;" alt="gluten-free">
+          <img src="./assets/images/covid_free.png" alt="covid-free">
+        </div>
+      </div>
+    </div>
+    <button mat-button (click) = "openDialog()" class="book_btn">Reservar</button>
   </div>
   <div class="mapa">
     <h2>Seleccione un restaurante en el mapa</h2>
