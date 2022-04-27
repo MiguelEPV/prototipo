@@ -15,6 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { FiltrarPipe } from './pipes/filtrar.pipe';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   entryComponents: [ReservaComponent],
   providers: [],
